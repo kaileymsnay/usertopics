@@ -1,0 +1,9 @@
+{% if not JXTOOLSJS %}
+	{% INCLUDEJS '@kaileymsnay_usertopics/jxtools.js' %}
+	{% DEFINE JXTOOLSJS = true %}
+{% endif %}
+
+<div id="list_inner_hidden_container" jxdom-closest="dl.details" jxdom-find="dd:nth-of-type(4)" jxdom-action="after">
+	<dt>{{ lang('TOPICS') ~ lang('COLON') }}</dt>
+	<dd><strong><a href="{{ U_SEARCH_TOPICS }}">{{ lang('SEARCH_USER_TOPICS') }}</a></strong></dd>
+</div>
